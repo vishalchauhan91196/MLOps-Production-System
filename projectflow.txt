@@ -1,0 +1,15 @@
+-------------------------  Setting up project structure, MLFlow and DVC  ---------------------------
+
+1. Create a venv 
+    python -m venv sentiment-analysis
+    sentiment-analysis\Scripts\activate
+2. pip install cookiecutter
+3. cookiecutter -c v1 https://github.com/drivendata/cookiecutter-data-science
+4. Setup MLFlow on Dagshub.
+5. Run the exp notebooks.
+6. dvc init
+7. Create a local folder as "local_s3" (temporary work)
+8. dvc remote add -d mylocal local_s3
+9. Add code to files/folders inside src dir.
+10. Add files - dvc.yaml and params.yaml
+11. dvc repro; dvc status
