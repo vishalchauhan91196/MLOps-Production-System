@@ -11,7 +11,7 @@ from from_root import from_root
 nltk.download('wordnet')
 nltk.download('stopwords')
 
-def preprocess_text(text) -> None:
+def preprocess_text(text: str) -> str:
     """  Applying text preprocessing to a specific column. """
     try:
         lemmatizer = WordNetLemmatizer()
@@ -29,6 +29,8 @@ def preprocess_text(text) -> None:
         text = " ".join([word for word in text.split() if word not in stop_words])
         # Lemmatization
         text = " ".join([lemmatizer.lemmatize(word) for word in text.split()])
+
+        return text
         
     except Exception as e:
         logging.error('Unexpected error during text preprocessing: %s', e)
@@ -38,7 +40,6 @@ def preprocess_dataframe(df, col) -> pd.DataFrame:
     """  Preprocess a DataFrame. """
     try:
         df[col] = df[col].apply(preprocess_text)
-
         df = df.dropna()
         logging.info("Data pre-processing completed")
         return df
