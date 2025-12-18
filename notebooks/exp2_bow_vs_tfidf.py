@@ -79,7 +79,7 @@ def load_data(file_path):
         df = pd.read_csv(file_path)
         df = normalize_text(df)
         df = df[df['sentiment'].isin(['positive', 'negative'])]
-        df['sentiment'] = df['sentiment'].replace({'negative': 0, 'positive': 1}).infer_objects(copy=False)
+        df["sentiment"] = df["sentiment"].map({"negative": 0, "positive": 1})
         return df
     except Exception as e:
         print(f"Error loading data: {e}")
