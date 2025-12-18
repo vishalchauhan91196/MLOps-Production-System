@@ -58,7 +58,7 @@ def removing_punctuations(text):
     return re.sub(f"[{re.escape(string.punctuation)}]", ' ', text)
 
 def removing_urls(text):
-    return re.sub(r'https?://\S+|www\.\S+', '', text)
+    return re.sub(r'http[s]?://\S+|www\.\S+', '', text)
 
 def normalize_text(df):
     try:
