@@ -85,10 +85,11 @@ target/
 *.swp
 *.swo
 
-.gitkeep
+*.gitkeep
 
 # Mypy cache
 .mypy_cache/
 
 sentiment-analysis-mlops/
 models/
+reports/
