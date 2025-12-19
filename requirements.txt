@@ -20,4 +20,6 @@ jinja2
 setuptools
 imblearn
 nltk
+mlflow
+dagshub
 -e .
