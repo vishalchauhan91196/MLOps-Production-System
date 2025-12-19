@@ -1,0 +1,9 @@
+{
+    "sql_server": {
+      "server": "localhost",
+      "database": "sentimentAnalysis",
+      "table": "dbo.first",
+      "username": "",
+      "pass":""
+    }
+  }

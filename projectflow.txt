@@ -1,8 +1,8 @@
 -------------------------  Setting up project structure, MLFlow and DVC  ---------------------------
 
 1. Create a venv 
-    python -m venv sentiment-analysis
-    sentiment-analysis\Scripts\activate
+    python -m venv sentiment-analysis-mlops
+    sentiment-analysis-mlops\Scripts\activate
 2. pip install cookiecutter
 3. cookiecutter -c v1 https://github.com/drivendata/cookiecutter-data-science
 4. Setup MLFlow on Dagshub.
