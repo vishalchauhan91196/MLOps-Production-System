@@ -88,7 +88,7 @@ def save_metrics(metrics: dict, file_path: str) -> None:
         raise
 
 def save_model_info(model_uri: str, file_path: str) -> None:
-    """Save the model run ID and path to a JSON file."""
+    """Save the model ID and path to a JSON file."""
     try:
         model_info = {'model_uri': model_uri}
         with open(file_path, 'w') as file:

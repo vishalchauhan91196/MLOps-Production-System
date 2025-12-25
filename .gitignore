@@ -93,3 +93,5 @@ target/
 sentiment-analysis-mlops/
 models/
 reports/
+local_s3/
+logs/
