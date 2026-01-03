@@ -4,9 +4,9 @@ WORKDIR /app
 
 COPY flask_app/ /app/
 
-COPY models/vectorizer.pkl /app/models/vectorizer.pkl
-
 RUN pip install -r requirements.txt
+
+COPY models/vectorizer.pkl /app/models/vectorizer.pkl
 
 RUN python -m nltk.downloader stopwords wordnet
 
